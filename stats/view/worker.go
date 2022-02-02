@@ -259,7 +259,7 @@ func NewMeter() Meter {
 		views:          make(map[string]*viewInternal),
 		viewStartTimes: make(map[*viewInternal]time.Time),
 		timer:          time.NewTicker(defaultReportingDuration),
-		c:              make(chan command, 1024),
+		c:              make(chan command, 20000),
 		quit:           make(chan bool),
 		done:           make(chan bool),
 
